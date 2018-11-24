@@ -10,7 +10,7 @@ following URL:
 To use the service, you will need a token which is available by
 signing up at the following URL:
 
-* https://openldbsv.nationalrail.co.uk/
+* http://openldbsv.nationalrail.co.uk/
 
 Two examples are included:
 
