@@ -7,11 +7,13 @@ import com.thalesgroup.rtti._2015_05_14.ldbsv_ref.LDBSVRefServiceSoap;
 import com.thalesgroup.rtti._2015_05_14.ldbsv_ref.types.TOCName;
 import com.thalesgroup.rtti._2017_10_01.ldbsv.Ldbsv;
 import org.apache.cxf.endpoint.Client;
+import org.apache.cxf.ext.logging.LoggingInInterceptor;
+import org.apache.cxf.ext.logging.LoggingOutInterceptor;
 import org.apache.cxf.frontend.ClientProxy;
-import org.apache.cxf.interceptor.LoggingInInterceptor;
-import org.apache.cxf.interceptor.LoggingOutInterceptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import javax.xml.datatype.DatatypeConfigurationException;
+import javax.naming.ConfigurationException;
 import java.util.List;
 
 /**
@@ -33,13 +35,15 @@ import java.util.List;
  */
 public class GetReferenceDataExample {
 
+    private static final Logger logger = LoggerFactory.getLogger(GetReferenceDataExample.class);
+
     private static final String LDB_TOKEN = "";
     private static final boolean DEBUG = false;
 
-    public static void main(String[] args) throws DatatypeConfigurationException {
+    public static void main(String[] args) throws ConfigurationException {
 
         if (LDB_TOKEN.isEmpty()) {
-            throw new RuntimeException("Please configure your OpenLDBWS token in GetDepartureBoardExample!");
+            throw new ConfigurationException("Please configure your OpenLDBSVWS token in GetReferenceDataExample!");
         }
 
         AccessToken accessToken = new AccessToken();
@@ -62,14 +66,14 @@ public class GetReferenceDataExample {
 
         GetTOCListResponseType tocList = soapService.getTOCList(params, accessToken);
 
-        System.out.println("All defined train operators");
-        System.out.println("===============================================================================");
+        logger.info("All defined train operators");
+        logger.info("===============================================================================");
 
         List<TOCName> tocs = tocList.getGetTOCListResult().getTOCList().getTOC();
 
         for (TOCName toc : tocs) {
 
-            System.out.println(toc.getToc() + " - " + toc.getValue());
+            logger.info("{} - {}", toc.getToc(), toc.getValue());
 
         }
 
