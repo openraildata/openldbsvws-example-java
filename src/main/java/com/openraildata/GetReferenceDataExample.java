@@ -1,11 +1,11 @@
 package com.openraildata;
 
 import com.thalesgroup.rtti._2013_11_28.token.types.AccessToken;
-import com.thalesgroup.rtti._2015_05_14.ldbsv_ref.GetTOCListResponseType;
-import com.thalesgroup.rtti._2015_05_14.ldbsv_ref.GetVersionedRefDataRequestParams;
-import com.thalesgroup.rtti._2015_05_14.ldbsv_ref.LDBSVRefServiceSoap;
 import com.thalesgroup.rtti._2015_05_14.ldbsv_ref.types.TOCName;
-import com.thalesgroup.rtti._2017_10_01.ldbsv.Ldbsv;
+import com.thalesgroup.rtti._2021_11_01.ldbsv_ref.GetTOCListResponseType;
+import com.thalesgroup.rtti._2021_11_01.ldbsv_ref.GetVersionedRefDataRequestParams;
+import com.thalesgroup.rtti._2021_11_01.ldbsv_ref.LDBSVRefServiceSoap;
+import com.thalesgroup.rtti._2021_11_01.ldbsv.Ldbsv;
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.ext.logging.LoggingInInterceptor;
 import org.apache.cxf.ext.logging.LoggingOutInterceptor;
