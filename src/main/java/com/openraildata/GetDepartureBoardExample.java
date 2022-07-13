@@ -22,8 +22,8 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
- * Open Live Departure Boards Staff Version Web Service (OpenLDBWS) API Demonstrator
- * Copyright (C)2018 OpenTrainTimes Ltd.
+ * Open Live Departure Boards Staff Version Web Service (OpenLDBSVWS) API Demonstrator
+ * Copyright (C)2018-2022 OpenTrainTimes Ltd.
  * <p>
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
