@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <cxf.version>3.5.2</cxf.version>
+        <cxf.version>3.5.3</cxf.version>
         <slf4j.version>1.7.36</slf4j.version>
         <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
@@ -55,8 +55,12 @@
                             <sourceRoot>${project.build.sourceDirectory}</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>https://lite.realtime.nationalrail.co.uk/OpenLDBSVWS/wsdl.aspx?ver=2021-11-01</wsdl>
-                                    <wsdl>https://lite.realtime.nationalrail.co.uk/OpenLDBSVWS/wsdl.aspx?refver=2021-11-01</wsdl>
+                                    <wsdl>
+                                        https://lite.realtime.nationalrail.co.uk/OpenLDBSVWS/wsdl.aspx?ver=2021-11-01
+                                    </wsdl>
+                                    <wsdl>
+                                        https://lite.realtime.nationalrail.co.uk/OpenLDBSVWS/wsdl.aspx?refver=2021-11-01
+                                    </wsdl>
                                     <extendedSoapHeaders>true</extendedSoapHeaders>
                                 </wsdlOption>
                             </wsdlOptions>
